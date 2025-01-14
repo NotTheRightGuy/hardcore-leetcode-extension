@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Leetcode Enhancer",
+    "version": "1.0",
+    "description": "A simple chrome extension to enhance your Leetcode experience",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["storage", "activeTab", "scripting"],
+    "content_scripts": [
+        {
+            "matches": ["https://leetcode.com/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
